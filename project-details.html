@@ -1,34 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Details</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<h2 id="project-title"></h2>
+<p>Price: $30</p>
+<p>Description: This project is a fully functional web-based e-commerce system.</p>
 
-  <nav>
-    <div class="logo">Final Year Projects</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="categories.html">Categories</a></li>
-    </ul>
-  </nav>
-
-  <section class="project-details">
-    <h2 id="project-title"></h2>
-    <p>Price: $30</p>
-    <p>Description: This project is a fully functional web-based e-commerce system.</p>
-    <button class="buy-btn">Buy Now</button>
-  </section>
-
-  <script>
-    // Get the project name from URL
-    const params = new URLSearchParams(window.location.search);
-    const projectName = params.get("project") || "Project Details";
-    document.getElementById("project-title").innerText = projectName;
-  </script>
-
-</body>
-</html>
+<script>
+  // Get the project name from the URL
+  const params = new URLSearchParams(window.location.search);
+  const projectName = params.get("project") || "Project Details";
+  document.getElementById("project-title").innerText = projectName;
+</script>
