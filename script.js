@@ -83,20 +83,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectCard = document.createElement("div");
     projectCard.classList.add("project-card");
     projectCard.innerHTML = `
-      <h3>${project.title}</h3>
-      <h4>Technologies: ${project.Technologies}</h4>
-      <p>Price: ${project.price}</p>
-      <div id="buyNowModal" class="modal">
-       <div class="modal-content">
-        <span class="close">&times;</span>
-        <img src="path/to/your/image.jpg" alt="Project Image">
-        <button class="buy-btn">Buy Now</button>
-       </div>
-      </div>
-    ;
-    projectContainer.appendChild(projectCard);
-  });
-
+     <h3>${project.title}</h3>
+     <h4>Technologies: ${project.Technologies}</h4>
+     <p>Price: ${project.price}</p>
+     <div id="buyNowModal" class="modal">
+      <div class="modal-content">
+       <span class="close">&times;</span>
+       <img src="path/to/your/image.jpg" alt="Project Image">
+       <button class="buy-btn">Buy Now</button>
+     </div>
+    </div>
+  `; // Corrected
+  projectContainer.appendChild(projectCard);
+});
   // Sample Categories Data
   const categories = ["Web Development", "AI/ML", "Cybersecurity", "IoT"];
   const categoryContainer = document.querySelector(".category-cards");
