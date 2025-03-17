@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
   <!-- Navbar -->
   <nav>
@@ -16,12 +15,12 @@
       <input type="text" placeholder="Search projects...">
     </div>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Categories</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#">Login/Register</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#" id="categories-btn">Categories</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="login.html">Login/Register</a></li>
     </ul>
   </nav>
 
@@ -38,11 +37,14 @@
     </div>
   </section>
 
-   <!-- Categories Section -->
-  <section class="categories">
+  <!-- Categories Section (Hidden Initially) -->
+  <section class="categories hidden" id="categories-section">
     <h2>Categories</h2>
     <div class="category-cards">
-      <!-- Category cards will go here -->
+      <a href="web-development.html" class="category-card">Web Development</a>
+      <a href="ai-ml.html" class="category-card">AI/ML</a>
+      <a href="cybersecurity.html" class="category-card">Cybersecurity</a>
+      <a href="iot.html" class="category-card">IoT</a>
     </div>
   </section>
 
@@ -71,7 +73,6 @@
     </div>
   </footer>
 
-<script src="script.js" defer></script></body>
-</html> -->
-
-
+  <script src="script.js" defer></script>
+</body>
+</html>
