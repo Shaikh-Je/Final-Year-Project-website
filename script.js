@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Mobile Menu Toggle
-  const navLinks = document.querySelector(".nav-links");
   const menuToggle = document.createElement("div");
   menuToggle.classList.add("menu-toggle");
   menuToggle.innerHTML = "&#9776;";
   document.querySelector("nav").prepend(menuToggle);
 
+  const navLinks = document.querySelector(".nav-links");
   menuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("active");
   });
 
   // Sample Project Data
   const projects = [
-    { title: "AI Chatbot", price: "$20" },
-    { title: "E-commerce Website", price: "$30" },
-    { title: "Android Attendance System", price: "$25" }
+    { title: "License Plate Number Recognition System", price: "Rs 2000" },
+    { title: "2x2 Player Dice Game", price: "Rs 500" },
+    { title: "Security Camera using Laptop Camera", price: "Rs 2000" }
   ];
 
   // Load Projects Dynamically
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Please enter a valid email.");
     } else {
       alert("Thank you for subscribing!");
-      emailInput.value = ""; // Clear input field after submission
+      emailInput.value = "";
     }
   });
 });
