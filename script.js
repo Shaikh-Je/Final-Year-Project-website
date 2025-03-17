@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <button class="buy-btn">Buy Now</button>
        </div>
       </div>
-
+    ;
     projectContainer.appendChild(projectCard);
   });
 
