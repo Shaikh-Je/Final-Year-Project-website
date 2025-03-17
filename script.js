@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     projectCard.classList.add("project-card");
     projectCard.innerHTML = `
       <h3>${project.title}</h3>
-      <h4>${project.Technologies : }</h3>
+      <h4>Technologies: ${project.Technologies}</h3>
       <p>Price: ${project.price}</p>
       <div id="buyNowModal" class="modal">
        <div class="modal-content">
