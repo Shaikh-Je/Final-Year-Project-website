@@ -363,7 +363,7 @@ nav {
 /* Hero Section */
 .hero {
   background: url('hero-image1.jpg') no-repeat center center/cover;
-  color: white;
+  color: black;
   text-align: center;
   padding: 5rem 0;
 }
