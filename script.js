@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
      <div id="buyNowModal" class="modal">
       <div class="modal-content">
        <span class="close">&times;</span>
-       <img src="path/to/your/image.jpg" alt="Project Image">
+       <img src="hero-image.jpg" alt="Project Image">
        <button class="buy-btn">Buy Now</button>
      </div>
     </div>
