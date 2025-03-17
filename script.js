@@ -72,9 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Sample Project Data
   const projects = [
-    { title: "License Plate Number Recognition System", price: "Rs 2000" },
-    { title: "2x2 Player Dice Game", price: "Rs 500" },
-    { title: "Security Camera using Laptop Camera", price: "Rs 2000" }
+    { title: "License Plate Number Recognition System", Technologies : "Python", price: "Rs 2000" },
+    { title: "2x2 Player Dice Game", Technologies : "JavaScript", price: "Rs 500" },
+    { title: "Security Camera using Laptop Camera", Technologies : "Python", price: "Rs 2000" }
   ];
 
   // Load Projects Dynamically
@@ -84,9 +84,16 @@ document.addEventListener("DOMContentLoaded", function () {
     projectCard.classList.add("project-card");
     projectCard.innerHTML = `
       <h3>${project.title}</h3>
+      <h4>${Technologies : }</h3>
       <p>Price: ${project.price}</p>
-      <button class="buy-btn">Buy Now</button>
-    `;
+      <div id="buyNowModal" class="modal">
+       <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="path/to/your/image.jpg" alt="Project Image">
+        <button class="buy-btn">Buy Now</button>
+       </div>
+      </div>
+
     projectContainer.appendChild(projectCard);
   });
 
