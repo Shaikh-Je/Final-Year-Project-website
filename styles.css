@@ -541,3 +541,41 @@ nav {
 .next-btn {
   right: 10px;
 }
+
+/* ----Categories: Web-development.html, Aiml.html,IOT, CYbersecurity-----------------
+.projects { */
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.projects h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.project-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  display: block;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  width: calc(50% - 20px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #666;
+}
