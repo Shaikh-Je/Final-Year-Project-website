@@ -118,28 +118,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
     const testimonialCards = document.querySelector('.testimonial-cards');
-    let index = 0;
+   let currentSlide = 0;
 
-    function showTestimonial(n) {
-        const totalTestimonials = document.querySelectorAll('.testimonial-card').length;
-        index = (n + totalTestimonials) % totalTestimonials;
-        testimonialCards.style.transform = `translateX(-${index * 100}%)`;
-    }
+  function moveSlide(direction) {
+    const slides = document.querySelectorAll('.testimonial-card');
+    const totalSlides = slides.length;
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    const offset = -currentSlide * 100;
+    document.querySelector('.testimonial-cards').style.transform = `translateX(${offset}%)`;
+  }
 
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            showTestimonial(index - 1);
-        });
-    }
-
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            showTestimonial(index + 1);
-        });
-    }
-
-    // Auto-slide functionality (optional)
-    setInterval(() => {
-        showTestimonial(index + 1);
-    }, 5000); // Change slide every 5 seconds
+  // Auto slide every 5 seconds
+  setInterval(() => moveSlide(1), 5000);
 });
