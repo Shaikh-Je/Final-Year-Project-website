@@ -1,4 +1,4 @@
-<h2 id="project-title"></h2>
+<!-- <h2 id="project-title"></h2>
 <p>Price: $30</p>
 <p>Description: This project is a fully functional web-based e-commerce system.</p>
 
@@ -8,3 +8,88 @@
   const projectName = params.get("project") || "Project Details";
   document.getElementById("project-title").innerText = projectName;
 </script>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; background-color: #f4f4f4; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        h1 { text-align: center; }
+        .project { border-bottom: 1px solid #ddd; padding: 10px 0; }
+        .project:last-child { border-bottom: none; }
+        h2 { color: #333; }
+        p { margin: 5px 0; }
+        .price { font-weight: bold; color: #007bff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Project List</h1>
+        
+        <div class="project">
+            <h2>License Plate Number Recognition (Python)</h2>
+            <p>This project allows users to upload a photo of a vehicle's license plate on a website and get the scanned output.</p>
+            <p class="price">Price: Rs 2000</p>
+        </div>
+
+        <div class="project">
+            <h2>Road Line Detection</h2>
+            <p>This project takes video input and generates images displaying road direction lines using OpenCV.</p>
+            <p class="price">Price: Rs 2000</p>
+        </div>
+
+        <div class="project">
+            <h2>Face and Eye Detection</h2>
+            <p>Implementation of Face and Eye Detection using OpenCV Default Haar Cascade.</p>
+            <p class="price">Price: Rs 2000</p>
+        </div>
+        
+        <div class="project">
+            <h2>Security Camera using Laptop Camera</h2>
+            <p>A smart security cam that captures and saves images when a face is detected.</p>
+            <p class="price">Price: Rs 2000</p>
+        </div>
+        
+        <div class="project">
+            <h2>QR Code Generator</h2>
+            <p>Generates QR codes for PDFs, app links, and social media profiles.</p>
+            <p class="price">Price: Rs 2000</p>
+        </div>
+        
+        <div class="project">
+            <h2>Driver Drowsiness Detection (Python)</h2>
+            <p>Detects drowsiness in drivers and alerts them using real-time face analysis.</p>
+            <p class="price">Price: Rs 2000</p>
+        </div>
+        
+        <div class="project">
+            <h2>C Program for Face Detection using OpenCV</h2>
+            <p>Uses OpenCV to detect and track faces in a live stream or video file.</p>
+            <p class="price">Price: Rs 2000</p>
+        </div>
+        
+        <div class="project">
+            <h2>Shopping Cart Project (C Language)</h2>
+            <p>Basic shopping cart system with signup, login, item search, and billing.</p>
+            <p class="price">Price: Rs 2000</p>
+        </div>
+        
+        <div class="project">
+            <h2>Calculator (JavaScript)</h2>
+            <p>Simple calculator project in JavaScript.</p>
+            <p class="price">Price: Rs 200</p>
+        </div>
+        
+        <div class="project">
+            <h2>Digital Clock</h2>
+            <p>JavaScript-based digital clock.</p>
+            <p class="price">Price: Rs 200</p>
+        </div>
+    </div>
+</body>
+</html>
