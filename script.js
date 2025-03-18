@@ -83,19 +83,53 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectCard = document.createElement("div");
     projectCard.classList.add("project-card");
     projectCard.innerHTML = `
-     <h3>${project.title}</h3>
-     <h4>Technologies: ${project.technologies}</h4>
-     <p>Price: ${project.price}</p>
-     <div id="buyNowModal" class="modal">
-      <div class="modal-content">
-       <span class="close">&times;</span>
-       <img src="/Final-Year-Project-website/hero-image.jpg" alt="Project Image">
-       <button class="buy-btn">Buy Now</button>
-     </div>
-    </div>
-  `; // Corrected
-  projectContainer.appendChild(projectCard);
-});
+      <h3>${project.title}</h3>
+      <h4>Technologies: ${project.technologies}</h4>
+      <p>Price: ${project.price}</p>
+      <button class="buy-btn">Buy Now</button>
+      <div class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>${project.title}</p>
+          <p>${project.price}</p>
+          <button class="buy-btn">Confirm Purchase</button>
+        </div>
+      </div>
+    `;
+    projectContainer.appendChild(projectCard);
+  });
+
+  // Get all modals
+  var modals = document.querySelectorAll(".modal");
+
+  // Get all buttons that open the modal
+  var btns = document.querySelectorAll(".buy-btn");
+
+  // Get all <span> elements that close the modal
+  var spans = document.querySelectorAll(".close");
+
+  // When the user clicks the button, open the modal 
+  btns.forEach(function(btn, index) {
+    btn.onclick = function() {
+      modals[index].style.display = "block";
+    };
+  });
+
+  // When the user clicks on <span> (x), close the modal
+  spans.forEach(function(span, index) {
+    span.onclick = function() {
+      modals[index].style.display = "none";
+    };
+  });
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    modals.forEach(function(modal) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
   // Sample Categories Data
   const categories = ["Web Development", "AI/ML", "Cybersecurity", "IoT"];
   const categoryContainer = document.querySelector(".category-cards");
@@ -139,42 +173,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 ///////////// Get the modal ////////////////////
-var modal = document.getElementById("buyNowModal");
+// var modal = document.getElementById("buyNowModal");
 
-  // Get the button that opens the modal
-var btns = document.querySelectorAll(".buy-btn");
+//   // Get the button that opens the modal
+// var btns = document.querySelectorAll(".buy-btn");
 
-  // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+//   // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks the button, open the modal 
-btns.forEach(function(btn) {
-  btn.onclick = function() {
-    var modal = btn.closest(".project-card").querySelector(".modal");
-    if (modal) {
-      modal.style.display = "block";
-    }
-  };
-});
+//   // When the user clicks the button, open the modal 
+// btns.forEach(function(btn) {
+//   btn.onclick = function() {
+//     var modal = btn.closest(".project-card").querySelector(".modal");
+//     if (modal) {
+//       modal.style.display = "block";
+//     }
+//   };
+// });
 
-  // Close modal when clicking on <span> (x)
-document.querySelectorAll(".close").forEach(function (span) {
-  span.onclick = function () {
-    var modal = span.closest(".modal");
-    if (modal) {
-      modal.style.display = "none";
-    }
-  };
-});
+//   // Close modal when clicking on <span> (x)
+// document.querySelectorAll(".close").forEach(function (span) {
+//   span.onclick = function () {
+//     var modal = span.closest(".modal");
+//     if (modal) {
+//       modal.style.display = "none";
+//     }
+//   };
+// });
 
-// Close modal when clicking outside of it
-window.onclick = function (event) {
-  var openModals = document.querySelectorAll(".modal");
-  openModals.forEach(function (modal) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  });
-};
+// // Close modal when clicking outside of it
+// window.onclick = function (event) {
+//   var openModals = document.querySelectorAll(".modal");
+//   openModals.forEach(function (modal) {
+//     if (event.target == modal) {
+//       modal.style.display = "none";
+//     }
+//   });
+// };
 });
 
