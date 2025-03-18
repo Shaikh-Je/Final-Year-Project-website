@@ -543,7 +543,7 @@ nav {
 }
 
 /* ----Categories: Web-development.html, Aiml.html,IOT, CYbersecurity-----------------
-.projects { */
+/* .projects { */
   padding: 20px;
   background-color: #f9f9f9;
 }
@@ -579,7 +579,7 @@ nav {
   font-size: 16px;
   color: #666;
 }
-
+ */
 /* -----------Modal CSS----------------- */
 /* Modal Styles */
 .modal {
@@ -777,4 +777,74 @@ button:hover {
 
 .buy-btn:hover {
     background: #c82333;
+}
+
+/* -----------Web-development.html------------ */
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.projects {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.projects h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.project-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    display: block;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    width: calc(50% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-size: 20px;
+    color: #007bff;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #666;
 }
